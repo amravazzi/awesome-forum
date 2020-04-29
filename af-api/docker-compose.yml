@@ -1,0 +1,31 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+    entrypoint: sh -c 'echo "CREATE DATABASE IF NOT EXISTS awesome_forum; CREATE DATABASE IF NOT EXISTS awesome_forum_test;" > /docker-entrypoint-initdb.d/init.sql; /usr/local/bin/docker-entrypoint.sh --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    depends_on:
+      - db
+    ports:
+     - "5000:5000"
+    volumes:
+      - ./:/srv/app
+    environment:
+      FLASK_APP: api.py
+      FLASK_ENV: development
+      DATABASE_URL: mysql+pymysql://root@db/awesome_forum
+    links:
+     - db
+    command: sh -c 'pipenv install --deploy --ignore-pipfile --system && flask db upgrade && flask seed run && flask run --host 0.0.0.0'
