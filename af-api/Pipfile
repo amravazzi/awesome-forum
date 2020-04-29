@@ -16,6 +16,7 @@ faker = "*"
 flask-seeder = "*"
 pprint = "*"
 flask-marshmallow = "*"
+marshmallow-sqlalchemy = "*"
 
 [requires]
 python_version = "3.6"

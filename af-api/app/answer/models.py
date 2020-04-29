@@ -14,9 +14,10 @@ class Answer(db.Model):
 	def __repr__(self):
 		return '<Answer {}>'.format(self.answer)
 
-	def __init__(self, answer, question_id):
+	def __init__(self, answer, question_id, like_count):
 		self.answer = answer
 		self.question_id = question_id
+		self.like_count = like_count
 
 class AnswerSchema(ma.Schema):
 	class Meta:
