@@ -7,12 +7,10 @@ answer_mod = Blueprint('answer', __name__)
 
 @answer_mod.route('/question/<question_id>/answers')
 def index(question_id):
-	all_answers = Answer.query.filter_by(question_id=question_id).all()
 	question = Question.query.filter_by(id=question_id).first()
-
 	r_question = question_schema.dump(question)
-	r_answers = answers_schema.dump(all_answers)
-	return jsonify(answers=r_answers,question=r_question)
+
+	return jsonify(r_question)
 
 @answer_mod.route('/question/<question_id>/answer', methods=["POST"])
 def create(question_id):

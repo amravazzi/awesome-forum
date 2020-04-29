@@ -22,7 +22,7 @@ class Answer(db.Model):
 class AnswerSchema(ma.Schema):
 	class Meta:
 		model = Answer
-		fields = ("answer", "question_id", "like_count", "status", "updated_at")
+		fields = ("id", "answer", "question_id", "like_count", "status", "updated_at")
 
 answer_schema = AnswerSchema()
 answers_schema = AnswerSchema(many=True)
