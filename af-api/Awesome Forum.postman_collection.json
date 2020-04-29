@@ -1,0 +1,398 @@
+{
+	"info": {
+		"_postman_id": "7dda2941-48fc-4be1-8120-a462d4ae7b02",
+		"name": "Awesome Forum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Question",
+			"item": [
+				{
+					"name": "List Questions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/questions",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Question",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"question\": \"Mussum Ipsum, cacilds vidis litro abertis. Sapien in monti palavris qui num significa nadis i pareci latim. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/question",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Question",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"question\": \"Mussummmmm Test!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/question/:question_id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"question",
+								":question_id"
+							],
+							"variable": [
+								{
+									"key": "question_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Question",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/question/:question_id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"question",
+								":question_id"
+							],
+							"variable": [
+								{
+									"key": "question_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Answers",
+			"item": [
+				{
+					"name": "List Answers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/question/:question_id/answers",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"question",
+								":question_id",
+								"answers"
+							],
+							"variable": [
+								{
+									"key": "question_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"answer\": \"Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Posuere libero varius.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/question/:question_id/answer",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"question",
+								":question_id",
+								"answer"
+							],
+							"variable": [
+								{
+									"key": "question_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Answer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"answer\": \"Não sou faixa preta cumpadi, sou preto inteiris, inteiris.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/answer/:answer_id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"answer",
+								":answer_id"
+							],
+							"variable": [
+								{
+									"key": "answer_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Answer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/answer/:answer_id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"answer",
+								":answer_id"
+							],
+							"variable": [
+								{
+									"key": "answer_id",
+									"value": "48"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Thumbs",
+			"item": [
+				{
+					"name": "Like Question",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/question/:question_id/thumbs_up",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"question",
+								":question_id",
+								"thumbs_up"
+							],
+							"variable": [
+								{
+									"key": "question_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dislike Question",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/question/:question_id/thumbs_up",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"question",
+								":question_id",
+								"thumbs_up"
+							],
+							"variable": [
+								{
+									"key": "question_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like Answer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/answer/:answer_id/thumbs_up",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"answer",
+								":answer_id",
+								"thumbs_up"
+							],
+							"variable": [
+								{
+									"key": "answer_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dislike Answer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/answer/:answer_id/thumbs_up",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"answer",
+								":answer_id",
+								"thumbs_up"
+							],
+							"variable": [
+								{
+									"key": "answer_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
