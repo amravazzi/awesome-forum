@@ -14,10 +14,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{HOST}}/questions",
+							"raw": "http://127.0.0.1:5000/questions",
+							"protocol": "http",
 							"host": [
-								"{{HOST}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "5000",
 							"path": [
 								"questions"
 							]
@@ -40,10 +45,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{HOST}}/question",
+							"raw": "http://127.0.0.1:5000/question",
+							"protocol": "http",
 							"host": [
-								"{{HOST}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "5000",
 							"path": [
 								"question"
 							]
@@ -66,10 +76,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{HOST}}/question/:question_id",
+							"raw": "http://127.0.0.1:5000/question/:question_id",
+							"protocol": "http",
 							"host": [
-								"{{HOST}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "5000",
 							"path": [
 								"question",
 								":question_id"
@@ -99,10 +114,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{HOST}}/question/:question_id",
+							"raw": "http://127.0.0.1:5000/question/:question_id",
+							"protocol": "http",
 							"host": [
-								"{{HOST}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "5000",
 							"path": [
 								"question",
 								":question_id"
@@ -129,10 +149,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{HOST}}/question/:question_id/answers",
+							"raw": "http://127.0.0.1:5000/question/:question_id/answers",
+							"protocol": "http",
 							"host": [
-								"{{HOST}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "5000",
 							"path": [
 								"question",
 								":question_id",
@@ -163,10 +188,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{HOST}}/question/:question_id/answer",
+							"raw": "http://127.0.0.1:5000/question/:question_id/answer",
+							"protocol": "http",
 							"host": [
-								"{{HOST}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "5000",
 							"path": [
 								"question",
 								":question_id",
@@ -197,10 +227,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{HOST}}/answer/:answer_id",
+							"raw": "http://127.0.0.1:5000/answer/:answer_id",
+							"protocol": "http",
 							"host": [
-								"{{HOST}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "5000",
 							"path": [
 								"answer",
 								":answer_id"
@@ -230,10 +265,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{HOST}}/answer/:answer_id",
+							"raw": "http://127.0.0.1:5000/answer/:answer_id",
+							"protocol": "http",
 							"host": [
-								"{{HOST}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "5000",
 							"path": [
 								"answer",
 								":answer_id"
@@ -241,7 +281,7 @@
 							"variable": [
 								{
 									"key": "answer_id",
-									"value": "48"
+									"value": "47"
 								}
 							]
 						}
@@ -269,10 +309,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{HOST}}/question/:question_id/thumbs_up",
+							"raw": "http://127.0.0.1:5000/question/:question_id/thumbs_up",
+							"protocol": "http",
 							"host": [
-								"{{HOST}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "5000",
 							"path": [
 								"question",
 								":question_id",
@@ -303,10 +348,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{HOST}}/question/:question_id/thumbs_up",
+							"raw": "http://127.0.0.1:5000/question/:question_id/thumbs_up",
+							"protocol": "http",
 							"host": [
-								"{{HOST}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "5000",
 							"path": [
 								"question",
 								":question_id",
@@ -337,10 +387,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{HOST}}/answer/:answer_id/thumbs_up",
+							"raw": "http://127.0.0.1:5000/answer/:answer_id/thumbs_up",
+							"protocol": "http",
 							"host": [
-								"{{HOST}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "5000",
 							"path": [
 								"answer",
 								":answer_id",
@@ -371,10 +426,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{HOST}}/answer/:answer_id/thumbs_up",
+							"raw": "http://127.0.0.1:5000/answer/:answer_id/thumbs_up",
+							"protocol": "http",
 							"host": [
-								"{{HOST}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "5000",
 							"path": [
 								"answer",
 								":answer_id",
